@@ -33,3 +33,16 @@ function kidsWithCandies(candies, extraCandies){
 }
 
 console.log(kidsWithCandies([2,3,5,1,3], 3))
+
+//605. Can Place Flowers
+function canPlaceFlowers(flowerbed, n){
+    let count =0;
+    for(let i=0; i<flowerbed.length; i++){
+        if(flowerbed[i]===0 && flowerbed[i-1]!==1 && flowerbed[i+1]!==1){
+            count++
+            flowerbed[i]=1
+        }
+    }
+    return count>=n
+
+}
